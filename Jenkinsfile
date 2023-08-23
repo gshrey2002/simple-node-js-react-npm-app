@@ -16,8 +16,7 @@ pipeline {
             steps {
               //  sh 'apk update && apk upgrade'
                // sh 'sudo apk upgrade'
-                    sh 'usermod -aG docker jenkins'
-sh 'usermod -aG docker ubuntu'
+                 
                 
                     // Install npm dependencies with the user 'node'
                     sh 'npm install'
