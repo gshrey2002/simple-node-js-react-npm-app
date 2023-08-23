@@ -13,7 +13,7 @@ pipeline {
             steps {
               //  sh 'apk update && apk upgrade'
                // sh 'sudo apk upgrade'
-                sh 'sudo npm install'
+                sh 'npm install'
              //   sh 'npm run build'
                // sh 'set +x'
             }
