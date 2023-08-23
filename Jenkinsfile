@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:12.2.0-alpine'
-             args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
+          //   args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
             args '-p 3000:3000'
            
         }
@@ -13,7 +13,7 @@ pipeline {
             steps {
               //  sh 'apk update && apk upgrade'
                // sh 'sudo apk upgrade'
-                sh 'RUN npm install'
+                sh 'npm install'
                 sh 'npm run build'
                 sh 'set +x'
             }
