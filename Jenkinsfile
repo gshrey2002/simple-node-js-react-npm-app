@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'node:12.2.0-alpine'
           //   args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
-            args '-p 3000:3000'
+            args '-p 3000:3000 --privileged'
            
         }
     }
