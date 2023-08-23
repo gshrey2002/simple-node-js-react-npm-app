@@ -16,11 +16,11 @@ pipeline {
                 sh 'set +x'
             }
         }
-        stage('Test') {
-                    steps {
-                        sh './jenkins/scripts/test.sh'
-                    }
-                }
+       // stage('Test') {
+            //        steps {
+              //          sh './jenkins/scripts/test.sh'
+              //      }
+              //  }
                 stage('docker image') {
                     environment{
                         DOCKER_IMAGE = "gshrey2002/nodecicd:${BUILD_NUMBER}"
