@@ -11,8 +11,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo apk update'
-                sh 'sudo apk upgrade'
+                sh 'apk update && apk upgrade'
+               // sh 'sudo apk upgrade'
                 sh 'npm install'
                 sh 'npm run build'
                 sh 'set +x'
