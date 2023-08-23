@@ -40,7 +40,7 @@ pipeline {
                             }
                         }
                 }
-                        stage{
+                        stage('updating file for CD'){
                             environment{
                                 GIT_REPO_NAME = "simple-node-js-react-npm-app"
                                 GIT_USER_NAME = "gshrey2002"
