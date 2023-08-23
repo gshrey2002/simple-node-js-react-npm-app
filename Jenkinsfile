@@ -28,7 +28,7 @@ pipeline {
                     }
                             steps {
                                 echo 'building docker image'
-                                SCRIPT{
+                                script{
                                 
                                 sh 'docker build -t ${DOCKER_IMAGE} .'
                                 // SH 'docker run -d -it '
