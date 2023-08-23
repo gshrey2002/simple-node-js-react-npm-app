@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'git-node-alpine:v0.9.0'
+            image 'node:12.2.0-alpine:v0.9.0'
              args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
             args '-p 3000:3000'
            
