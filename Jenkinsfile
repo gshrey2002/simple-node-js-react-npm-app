@@ -11,7 +11,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'run npm install'
+                sh 'aapk add --update npm'
+                sh 'npm install'
                 sh 'npm run build'
                 sh 'set +x'
             }
