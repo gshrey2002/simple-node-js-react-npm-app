@@ -14,8 +14,8 @@ pipeline {
               //  sh 'apk update && apk upgrade'
                // sh 'sudo apk upgrade'
                 sh 'sudo npm install'
-                sh 'npm run build'
-                sh 'set +x'
+             //   sh 'npm run build'
+               // sh 'set +x'
             }
         }
        // stage('Test') {
