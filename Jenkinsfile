@@ -17,10 +17,10 @@ pipeline {
               //  sh 'apk update && apk upgrade'
                // sh 'sudo apk upgrade'
 
-                 dir('/home/node') {
+                 dir('/home/node') 
                     // Install npm dependencies with the user 'node'
                     sh 'npm install'
-                 }
+                 
                // sh 'ls -l'
               //  sh 'npm install'
              //   sh 'npm run build'
