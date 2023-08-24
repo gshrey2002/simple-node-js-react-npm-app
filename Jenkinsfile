@@ -57,7 +57,7 @@ pipeline {
                             }
                         }
                 }
-                        stage('updating file for CD'){
+                        stage('updating file for Continous deployment'){
                             environment{
                                 GIT_REPO_NAME = "simple-node-js-react-npm-app"
                                 GIT_USER_NAME = "gshrey2002"
