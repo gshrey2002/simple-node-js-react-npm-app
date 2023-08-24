@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: node-js-app
-        image: gshrey2002/nodecicd:{replicaImageTag}
+        image: gshrey2002/nodecicd:replaceImageTag
         ports:
         - containerPort: 8080
