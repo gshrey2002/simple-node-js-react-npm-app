@@ -71,7 +71,7 @@ pipeline {
                             git config user.email "guptashrey163@gmail.com"
                             git config user.name "Shrey"
                             BUILD_NUMBER=${BUILD_NUMBER}
-                            simple-node-js-react-npm-app/manifest/deployment.yaml
+                            
                             sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" manifest/deployment.yaml
                             git add manifest/deployment.yaml
                             git commit -m "Update deployment image to version ${BUILD_NUMBER}"
