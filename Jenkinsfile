@@ -65,7 +65,7 @@ pipeline {
                            
                                 
                                  steps {
-                                    echo 'updating deployment file'
+                                    echo 'updating deployment file for cicd'
                             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                             sh '''
                             git config user.email "guptashrey163@gmail.com"
