@@ -62,9 +62,10 @@ pipeline {
                                 GIT_REPO_NAME = "simple-node-js-react-npm-app"
                                 GIT_USER_NAME = "gshrey2002"
                             }
-                            steps{
-                                echo 'updating deployment file'
+                           
+                                
                                  steps {
+                                    echo 'updating deployment file'
                             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                             sh '''
                             git config user.email "guptashrey163@gmail.com"
@@ -77,7 +78,7 @@ pipeline {
                             '''
                             }
                                         }
-                            }
+                            
 
                         }
 
