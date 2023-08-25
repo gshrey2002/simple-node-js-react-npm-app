@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: node-js-app
-        image: gshrey2002/nodecicd:14
+        image: gshrey2002/nodecicd:16
         ports:
         - containerPort: 8080
