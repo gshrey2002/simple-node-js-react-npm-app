@@ -16,7 +16,7 @@ pipeline {
     }
      
     stages {
-        stage('Build npm') {
+        stage('Build npm with install') {
             steps {
                // sh 'chown -R 115:122 "/.npm"'
               //  sh 'apk update && apk upgrade'
