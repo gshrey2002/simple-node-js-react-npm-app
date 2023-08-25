@@ -1,17 +1,16 @@
 pipeline {
-    agent 
-     {
+    agent any
+    // {
        
-         docker {
-        
+        // docker {
+        //     image 'node:latest'
         // //    image 'node:12.2.0-alpine'
             
         //   //   args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
-              image 'node:latest'
-        args '-p 3000:3000 --privileged'
+        //     args '-p 3000:3000 --privileged'
            
-         }
- }
+        // }
+//    }
     environment {
         CI = 'true'
     }
@@ -89,8 +88,30 @@ pipeline {
                             
 
                         }
+                     
 
 
     
 }
+// post{
+//        success {
+//                             script {
+                          
+//                               echo "Pipeline succeeded! Terminating agent..."
+//                              catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+//                              // Run any cleanup steps here
+//                                 sh '''
+                            
+//                             sed -i "s/${BUILD_NUMBER}/replaceImageTag/g" manifest/deployment.yaml
+//                             git add manifest/deployment.yaml
+//                             git commit -m "Update deployment image to version ${BUILD_NUMBER}"
+//                             git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
+
+//                             '''
+
+//                              }
+//                            currentBuild.result = 'SUCCESS' // Set the build result to SUCCESS
+//             }
+//         }
+// }
 }
