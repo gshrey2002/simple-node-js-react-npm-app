@@ -18,6 +18,10 @@ pipeline {
     stages {
         stage('Build npm with install') {
             steps {
+         //       sh 'apk add git'
+         //       sh 'git clone https://github.com/gshrey2002/simple-node-js-react-npm-app.git' //in case of node alpine image
+          //      sh 'cd simple-node-js-react-npm-app'
+                
                // sh 'chown -R 115:122 "/.npm"'
               //  sh 'apk update && apk upgrade'
                // sh 'sudo apk upgrade'
